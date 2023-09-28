@@ -1,0 +1,60 @@
+.check {
+    -webkit-appearance: none; /*hides the default checkbox*/
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 20px;
+    transition: 0.10s;
+    background-color: #FE0006;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  .check:checked {
+    background-color: #0E9700;
+  }
+  
+  .check:before {
+    content: "✖";
+  }
+  .check:checked:before {
+    content: "✔";
+  }
+  
+  .check:hover {
+    cursor: pointer; 
+    opacity: 0.8;
+  }
+  .table-stylle{
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    font-family:sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  .table-stylle thead  tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left
+  }
+  .table-stylle th, .table-stylle td{
+    padding: 12px 15px;
+  }
+  .table-stylle tr{
+    border-bottom: 1px solid #dddddd;
+
+  }
+  .table-stylle tr:nth-of-type(even){
+    background-color: #f3f3f3;
+  }
+  .table-stylle tr:last-of-type{
+    border-bottom: 2px solid #009879;
+  }
+  .table-stylle tr .active-row{
+    font-weight: bold;
+    color:#009879;
+  }

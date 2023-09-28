@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <table class="table-stylle">
+                <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+                <tr *ngFor="let item of tasklist | async" class="active-row">
+                    <td>
+                        {{item.userId}}
+                    </td>
+                    <td>
+                        {{item.id}}
+                    </td>
+                    <td>
+                        {{item.title}}
+                    </td>
+                    <td>
+                      <input type="checkbox" *ngIf=!item.completed name="switch" class="check" disabled>
+                        <input type="checkbox" *ngIf="item.completed"  name="check" class="check"  checked disabled>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+</div>
+
